@@ -2,17 +2,12 @@ from tkinter import *
 import turtle
 
 def winner(player):
-
     display = Tk()
-
     Label(display, text = player + ' WINS!!!', bg='white', fg='red', font='Broadway 40 bold').pack()
-
     display.mainloop()
 
 def data_entry():
-
     main_window.destroy()
-
     def play_game():
 
         player1 = e1.get()
@@ -57,34 +52,22 @@ def data_entry():
 
         def P1_up():
             y = P1.ycor()
-            if y < 250:
-                y += 10
-            else:
-                y = 250
+            y = min(250, y + 10)
             P1.sety(y)
 
         def P1_down():
             y = P1.ycor()
-            if y > -240:
-                y -= 10
-            else:
-                y = -240
+            y = max(-250, y - 10)
             P1.sety(y)
 
         def P2_up():
             y = P2.ycor()
-            if y < 250:
-                y += 10
-            else:
-                y = 250
+            y = min(250, y + 10)
             P2.sety(y)
 
         def P2_down():
             y = P2.ycor()
-            if y > -240:
-                y -= 10
-            else:
-                y = -240
+            y = max(-250, y - 10)
             P2.sety(y)
 
         game_over = False
@@ -136,8 +119,8 @@ def data_entry():
 
     entry_window.mainloop()
 
-def leave_window():
-    entry_window.destroy()
+    def leave_window():
+        entry_window.destroy()
 
 def leave_game():
     main_window.destroy()
