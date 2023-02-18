@@ -1,4 +1,4 @@
-# Game Selector
+# Game Hub
 This project is a simple game hub that allows the user to choose between three games: Ping Pong, Tic-Tac-Toe, and Snake.
 The user can select the game they want to play by clicking the corresponding button on the main menu. Each button runs the corresponding python script for the selected game.
 
